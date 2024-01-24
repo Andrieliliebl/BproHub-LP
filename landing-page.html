@@ -41,6 +41,7 @@
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="assets/js/front-config.js"></script>
+
 </head>
 
 <body>
@@ -166,23 +167,23 @@
             <label class="d-block form-label">Selecione o <strong>seu perfil</strong> e veja como podemos te ajudar:
             </label>
             <div class="form-check-inline mt-3 me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" required checked />
+              <input type="radio" name="basic-default-radio" class="form-check-input" id="cliente-radio" onclick="selectPerfil('cliente-radio')" required />
               <label class="form-check-label" for="basic-default-radio-male">Sou cliente/contratante</label>
             </div>
             <div class="form-check-inline me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" required />
+              <input type="radio" name="basic-default-radio" class="form-check-input" id="servidor-radio" onclick="selectPerfil('servidor-radio')" required />
               <label class="form-check-label" for="basic-default-radio-female">Sou servidor público</label>
             </div>
             <div class="form-check-inline me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" required />
-              <label class="form-check-label" for="basic-default-radio-female">Sou servidor projetista</label>
+              <input type="radio" name="basic-default-radio" class="form-check-input" id="projetista-radio" onclick="selectPerfil('projetista-radio')" required />
+              <label class="form-check-label" for="basic-default-radio-female">Sou projetista</label>
             </div>
             <div class="form-check-inline me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" required />
+              <input type="radio" name="basic-default-radio" class="form-check-input" id="construtora-radio" onclick="selectPerfil('construtora-radio')" required />
               <label class="form-check-label" for="basic-default-radio-female">Sou representante de construtora</label>
             </div>
             <div class="form-check-inline me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" required />
+              <input type="radio" name="basic-default-radio" class="form-check-input" id="fiscal-radio" onclick="selectPerfil('fiscal-radio')" required />
               <label class="form-check-label" for="basic-default-radio-female">Sou fiscal de obra</label>
             </div>
           </div>
@@ -197,8 +198,22 @@
                 <div class="avatar me-2">
                   <span class="avatar-initial rounded bg-label-success"><i class="ti ti-player-play ti-md"></i></span>
                 </div>
-                <h6 class="ms-1 mb-0">Início</h6>
+                <h6 class="ms-1 mb-0 inicio">Início</h6>
               </div>
+              <p id="inicio-texto">
+                Identifique necessidades e objetivos <br>
+
+                Armazene toda a documentação em um ambiente seguro e rastreável <br>
+                
+                Garanta o mesmo padrão de linguagem para todos os agentes do processo <br>
+                
+                Desenvolva conhecimentos sobre projetos focados em BIM e ESG <br>
+                
+                Aprenda a gerenciar projetos com metodologias ágeis <br> 
+                
+                Receba e registre propostas de construtoras em um ambiente integrado <br>
+                
+              </p>
             </div>
           </div>
         </div>
@@ -209,8 +224,12 @@
                 <div class="avatar me-2">
                   <span class="avatar-initial rounded bg-label-warning"><i class="ti ti-chart-candle ti-md"></i></span>
                 </div>
-                <h6 class="ms-1 mb-0">Planejamento</h6>
+                <h6 class="ms-1 mb-0 planejamento">Planejamento</h6>
               </div>
+              <p id="planejamento-texto">
+                
+                
+              </p>
             </div>
           </div>
         </div>
@@ -221,8 +240,12 @@
                 <div class="avatar me-2">
                   <span class="avatar-initial rounded bg-label-info"><i class="ti ti-timeline ti-md"></i></span>
                 </div>
-                <h6 class="ms-1 mb-0">Execução</h6>
+                <h6 class="ms-1 mb-0 execucao">Execução</h6>
               </div>
+              <p id="execucao-texto">
+                
+                
+              </p>
             </div>
           </div>
         </div>
@@ -233,8 +256,12 @@
                 <div class="avatar me-2">
                   <span class="avatar-initial rounded bg-label-danger"><i class="ti ti-eye ti-md"></i></span>
                 </div>
-                <h6 class="ms-1 mb-0">Monitoramento</h6>
+                <h6 class="ms-1 mb-0 monitoramento">Monitoramento</h6>
               </div>
+              <p id="monitoramento-texto">
+                
+                
+              </p>
             </div>
           </div>
         </div>
@@ -245,8 +272,12 @@
                 <div class="avatar me-2">
                   <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-timeline ti-md"></i></span>
                 </div>
-                <h6 class="ms-1 mb-0">Pós-obra</h6>
+                <h6 class="ms-1 mb-0 pos-obra">Pós-obra</h6>
               </div>
+              <p id="pos-obra-texto">
+                
+                
+              </p>
             </div>
           </div>
         </div>
@@ -438,10 +469,9 @@
             <div class="mb-3 pb-1">
               <span class="badge bg-label-primary">Sobre a Bpro</span>
             </div>
-            <h3 class="mb-1"><span class="section-title">What people say</span></h3>
+            <h3 class="mb-1"><span class="section-title">Sobre a Bpro</span></h3>
             <p class="mb-3 mb-md-5">
-              See what our customers have to<br class="d-none d-xl-block" />
-              say about their experience.
+              Já somamos mais de 250.000 m² de projetos desenvolvidos, utilizando a metodologia BIM
             </p>
             <div class="landing-reviews-btns">
               <button id="reviews-previous-btn" class="btn btn-label-primary reviews-btn me-3 scaleX-n1-rtl"
@@ -460,183 +490,58 @@
                   <div class="swiper-slide">
                     <div class="card h-100">
                       <div class="card-body text-body d-flex flex-column justify-content-between h-100">
-                        <div class="mb-3">
-                          <img src="assets/img/front-pages/branding/logo-1.png" alt="client logo"
-                            class="client-logo img-fluid" />
+                        <div>
+                          <h5 class="mb-2">Estamos no Brasil e na América Latina!
+                          </h5>
                         </div>
                         <p>
-                          “Vuexy is hands down the most useful front end Bootstrap theme I've ever used. I can't
-                          wait
-                          to use it again for my next project.”
+                          Com mais de 35 clientes satisfeitos, utilizamos a metodologia BIM para transformar dados em
+                          informações para um melhor planejamento e eficiência de projetos.
                         </p>
-                        <div class="text-warning mb-3">
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <div class="avatar me-2 avatar-sm">
-                            <img src="assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                          </div>
-                          <div>
-                            <h6 class="mb-0">Cecilia Payne</h6>
-                            <p class="small text-muted mb-0">CEO of Airbnb</p>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="card h-100">
                       <div class="card-body text-body d-flex flex-column justify-content-between h-100">
-                        <div class="mb-3">
-                          <img src="assets/img/front-pages/branding/logo-2.png" alt="client logo"
-                            class="client-logo img-fluid" />
+                        <div>
+                          <h5 class="mb-2">Fazemos parte do Grupo RAC
+                          </h5>
                         </div>
                         <p>
-                          “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building
-                          dashboard sites on almost any project.”
+                          Somos o braço de projetos, inovação e tecnologia do grupo RAC. A BPRO nasceu para trazer
+                          diferenciais nos resultados das obras, sempre unindo a sustentabilidade e otimização de
+                          processos.
                         </p>
-                        <div class="text-warning mb-3">
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <div class="avatar me-2 avatar-sm">
-                            <img src="assets/img/avatars/2.png" alt="Avatar" class="rounded-circle" />
-                          </div>
-                          <div>
-                            <h6 class="mb-0">Eugenia Moore</h6>
-                            <p class="small text-muted mb-0">Founder of Hubspot</p>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="card h-100">
                       <div class="card-body text-body d-flex flex-column justify-content-between h-100">
-                        <div class="mb-3">
-                          <img src="assets/img/front-pages/branding/logo-3.png" alt="client logo"
-                            class="client-logo img-fluid" />
+                        <div>
+                          <h5 class="mb-2">Grande Portfólio de Obras Importantes
+                          </h5>
                         </div>
                         <p>
-                          This template is really clean & well documented. The docs are really easy to understand
-                          and
-                          it's always easy to find a screenshot from their website.
+                          Somamos mais de 250.000 m² de projetos desenvolvidos, com BIM como
+                          diferencial e conseguimos transformar dados em informações para um melhor planejamento e
+                          eficiência do projeto.
                         </p>
-                        <div class="text-warning mb-3">
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <div class="avatar me-2 avatar-sm">
-                            <img src="assets/img/avatars/3.png" alt="Avatar" class="rounded-circle" />
-                          </div>
-                          <div>
-                            <h6 class="mb-0">Curtis Fletcher</h6>
-                            <p class="small text-muted mb-0">Design Lead at Dribbble</p>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="card h-100">
                       <div class="card-body text-body d-flex flex-column justify-content-between h-100">
-                        <div class="mb-3">
-                          <img src="assets/img/front-pages/branding/logo-4.png" alt="client logo"
-                            class="client-logo img-fluid" />
+                        <div>
+                          <h5 class="mb-2">Visão de Processo, Inovação e Sustentabilidade
+                          </h5>
                         </div>
                         <p>
-                          All the requirements for developers have been taken into consideration, so I’m able to
-                          build
-                          any interface I want.
+                          Com base em dados climáticos e de performance, aliamos tecnologia e inovação e realizamos
+                          projetos integrados e multidiciplinares, com alternativas de design sustentável.
                         </p>
-                        <div class="text-warning mb-3">
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star ti-sm"></i>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <div class="avatar me-2 avatar-sm">
-                            <img src="assets/img/avatars/4.png" alt="Avatar" class="rounded-circle" />
-                          </div>
-                          <div>
-                            <h6 class="mb-0">Sara Smith</h6>
-                            <p class="small text-muted mb-0">Founder of Continental</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card h-100">
-                      <div class="card-body text-body d-flex flex-column justify-content-between h-100">
-                        <div class="mb-3">
-                          <img src="assets/img/front-pages/branding/logo-5.png" alt="client logo"
-                            class="client-logo img-fluid" />
-                        </div>
-                        <p>
-                          “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building
-                          dashboard sites on almost any project.”
-                        </p>
-                        <div class="text-warning mb-3">
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <div class="avatar me-2 avatar-sm">
-                            <img src="assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
-                          </div>
-                          <div>
-                            <h6 class="mb-0">Eugenia Moore</h6>
-                            <p class="small text-muted mb-0">Founder of Hubspot</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card h-100">
-                      <div class="card-body text-body d-flex flex-column justify-content-between h-100">
-                        <div class="mb-3">
-                          <img src="assets/img/front-pages/branding/logo-6.png" alt="client logo"
-                            class="client-logo img-fluid" />
-                        </div>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nemo mollitia, ad eum
-                          officia numquam nostrum repellendus consequuntur!
-                        </p>
-                        <div class="text-warning mb-3">
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star-filled ti-sm"></i>
-                          <i class="ti ti-star ti-sm"></i>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <div class="avatar me-2 avatar-sm">
-                            <img src="assets/img/" alt="Avatar" class="rounded-circle" />
-                          </div>
-                          <div>
-                            <h6 class="mb-0">Sara Smith</h6>
-                            <p class="small text-muted mb-0">Founder of Continental</p>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -649,26 +554,21 @@
         </div>
       </div>
       <!-- What people say slider: End -->
+
       <hr class="m-0" />
       <!-- Logo slider: Start -->
       <div class="container">
         <div class="swiper-logo-carousel py-4 my-lg-2">
           <div class="swiper" id="swiper-clients-logos">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper d-flex justify-content-center">
               <div class="swiper-slide">
-                <img src="assets/img/front-pages/branding/logo_1-light.png" alt="client logo" class="client-logo" />
+                <img src="assets/img/front-pages/branding/Sanepar.png" alt="client logo" class="client-logo" />
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/front-pages/branding/logo_2-light.png" alt="client logo" class="client-logo" />
+                <img src="assets/img/front-pages/branding/fiocruz.jpg" alt="client logo" class="client-logo" />
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/front-pages/branding/logo_3-light.png" alt="client logo" class="client-logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/front-pages/branding/logo_4-light.png" alt="client logo" class="client-logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/front-pages/branding/logo_5-light.png" alt="client logo" class="client-logo" />
+                <img src="assets/img/front-pages/branding/erastinho.png" alt="client logo" class="client-logo" />
               </div>
             </div>
           </div>
@@ -687,9 +587,9 @@
       <div class="container">
         <div class="row align-items-center gy-5 gy-lg-0">
           <div class="col-lg-6 text-center text-lg-start">
-            <h6 class="h2 text-primary fw-bold mb-1">Ready to Get Started?</h6>
-            <p class="fw-medium mb-4">Start your project with a 14-day free trial</p>
-            <a href="payment-page.html" class="btn btn-lg btn-primary">Get Started</a>
+            <h6 class="h2 text-primary fw-bold mb-1">Pronto para aproveitar o máximo de projetos BIM?</h6>
+            <p class="fw-medium mb-4">Teste nossas ferramentas de graça, agora!</p>
+            <a href="payment-page.html" class="btn btn-lg btn-primary">Testar grátis</a>
           </div>
           <div class="col-lg-6 pt-lg-5 text-center text-lg-end">
             <img src="assets/img/front-pages/landing-page/cta-dashboard.png" alt="cta dashboard" class="img-fluid" />
@@ -703,36 +603,27 @@
     <section id="landingContact" class="section-py bg-body landing-contact">
       <div class="container">
         <div class="text-center mb-3 pb-1">
-          <span class="badge bg-label-primary">Contact US</span>
+          <span class="badge bg-label-primary">Entre em contato</span>
         </div>
-        <h3 class="text-center mb-1"><span class="section-title">Let's work</span> together</h3>
-        <p class="text-center mb-4 mb-lg-5 pb-md-3">Any question or remark? just write us a message</p>
+        <h3 class="text-center mb-1"><span class="section-title">Vamos construir</span> juntos</h3>
+        <p class="text-center mb-4 mb-lg-5 pb-md-3">Comece a testar todas as nossas funcionalidades agora mesmo e
+          obtenha o melhor que a metodologia BIM pode te oferecer.
+        </p>
         <div class="row gy-4">
           <div class="col-lg-5">
             <div class="contact-img-box position-relative border p-2 h-100">
               <img src="assets/img/front-pages/landing-page/contact-customer-service.png" alt="contact customer service"
                 class="contact-img w-100 scaleX-n1-rtl" />
               <div class="pt-3 px-4 pb-1">
-                <div class="row gy-3 gx-md-4">
-                  <div class="col-md-6 col-lg-12 col-xl-6">
+                <div class="row gx-md-4">
+                  <div class="col-md-6 col-lg-12">
                     <div class="d-flex align-items-center">
                       <div class="badge bg-label-primary rounded p-2 me-2"><i class="ti ti-mail ti-sm"></i></div>
                       <div>
                         <p class="mb-0">Email</p>
                         <h5 class="mb-0">
-                          <a href="mailto:example@gmail.com" class="text-heading">example@gmail.com</a>
+                          <a href="mailto:bprohub@bproeng.com.br" class="text-heading">bprohub@bproeng.com.br</a>
                         </h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-12 col-xl-6">
-                    <div class="d-flex align-items-center">
-                      <div class="badge bg-label-success rounded p-2 me-2">
-                        <i class="ti ti-phone-call ti-sm"></i>
-                      </div>
-                      <div>
-                        <p class="mb-0">Phone</p>
-                        <h5 class="mb-0"><a href="tel:+1234-568-963" class="text-heading">+1234 568 963</a></h5>
                       </div>
                     </div>
                   </div>
@@ -743,7 +634,7 @@
           <div class="col-lg-7">
             <div class="card">
               <div class="card-body">
-                <h4 class="mb-1">Send a message</h4>
+                <h4 class="mb-1">Entre em contato</h4>
                 <p class="mb-4">
                   If you would like to discuss anything related to payment, account, licensing,<br
                     class="d-none d-lg-block" />
@@ -752,7 +643,7 @@
                 <form>
                   <div class="row g-3">
                     <div class="col-md-6">
-                      <label class="form-label" for="contact-form-fullname">Full Name</label>
+                      <label class="form-label" for="contact-form-fullname">Nome completo</label>
                       <input type="text" class="form-control" id="contact-form-fullname" placeholder="john" />
                     </div>
                     <div class="col-md-6">
@@ -760,12 +651,12 @@
                       <input type="text" id="contact-form-email" class="form-control" placeholder="johndoe@gmail.com" />
                     </div>
                     <div class="col-12">
-                      <label class="form-label" for="contact-form-message">Message</label>
+                      <label class="form-label" for="contact-form-message">Sua mensagem</label>
                       <textarea id="contact-form-message" class="form-control" rows="8"
                         placeholder="Write a message"></textarea>
                     </div>
                     <div class="col-12">
-                      <button type="submit" class="btn btn-primary">Send inquiry</button>
+                      <button type="submit" class="btn btn-primary">Envie agora</button>
                     </div>
                   </div>
                 </form>
@@ -786,23 +677,7 @@
       <div class="container">
         <div class="row gx-0 gy-4 g-md-5">
           <div class="col-lg-5">
-            <a href="landing-page.html" class="app-brand-link mb-4">
-              <span class="app-brand-logo demo">
-                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
-                    fill="#7367F0" />
-                  <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd"
-                    d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z" fill="#161616" />
-                  <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z" fill="#161616" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
-                    fill="#7367F0" />
-                </svg>
-              </span>
-              <span class="app-brand-text demo footer-link fw-bold ms-2 ps-1">Vuexy</span>
-            </a>
+        
             <p class="footer-text footer-logo-description mb-4">
               Most developer friendly & highly customisable Admin Dashboard Template.
             </p>
@@ -817,57 +692,6 @@
               </div>
             </form>
           </div>
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <h6 class="footer-title mb-4">Demos</h6>
-            <ul class="list-unstyled">
-              <li class="mb-3">
-                <a href="../vertical-menu-template/" target="_blank" class="footer-link">Vertical Layout</a>
-              </li>
-              <li class="mb-3">
-                <a href="../horizontal-menu-template/" target="_blank" class="footer-link">Horizontal Layout</a>
-              </li>
-              <li class="mb-3">
-                <a href="../vertical-menu-template-bordered/" target="_blank" class="footer-link">Bordered
-                  Layout</a>
-              </li>
-              <li class="mb-3">
-                <a href="../vertical-menu-template-semi-dark/" target="_blank" class="footer-link">Semi Dark
-                  Layout</a>
-              </li>
-              <li class="mb-3">
-                <a href="../vertical-menu-template-dark/" target="_blank" class="footer-link">Dark Layout</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <h6 class="footer-title mb-4">Pages</h6>
-            <ul class="list-unstyled">
-              <li class="mb-3">
-                <a href="pricing-page.html" class="footer-link">Pricing</a>
-              </li>
-              <li class="mb-3">
-                <a href="payment-page.html" class="footer-link">Payment<span
-                    class="badge rounded bg-primary ms-2">New</span></a>
-              </li>
-              <li class="mb-3">
-                <a href="checkout-page.html" class="footer-link">Checkout</a>
-              </li>
-              <li class="mb-3">
-                <a href="help-center-landing.html" class="footer-link">Help Center</a>
-              </li>
-              <li class="mb-3">
-                <a href="../vertical-menu-template/auth-login-cover.html" target="_blank"
-                  class="footer-link">Login/Register</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <h6 class="footer-title mb-4">Download our app</h6>
-            <a href="javascript:void(0);" class="d-block footer-link mb-3 pb-2"><img
-                src="assets/img/front-pages/landing-page/apple-icon.png" alt="apple icon" /></a>
-            <a href="javascript:void(0);" class="d-block footer-link"><img
-                src="assets/img/front-pages/landing-page/google-play-icon.png" alt="google play icon" /></a>
-          </div>
         </div>
       </div>
     </div>
@@ -879,20 +703,19 @@
               document.write(new Date().getFullYear());
             </script>
           </span>
-          <a href="https://pixinvent.com" target="_blank" class="fw-medium text-white footer-link">Pixinvent,</a>
-          <span class="footer-text"> Made with ❤️ for a better web.</span>
+          <a href="https://pixinvent.com" target="_blank" class="fw-medium text-white footer-link">Bpro</a>
         </div>
         <div>
-          <a href="https://github.com/pixinvent" class="footer-link me-3" target="_blank">
+          <a href="https://github.com/Bproeng" class="footer-link me-3" target="_blank">
             <img src="assets/img/front-pages/icons/github-light.png" alt="github icon" />
           </a>
-          <a href="https://www.facebook.com/pixinvents/" class="footer-link me-3" target="_blank">
+          <a href="https://www.facebook.com/Bproeng/" class="footer-link me-3" target="_blank">
             <img src="assets/img/front-pages/icons/facebook-light.png" alt="facebook icon" />
           </a>
-          <a href="https://twitter.com/pixinvents" class="footer-link me-3" target="_blank">
+          <a href="https://twitter.com/Bproeng" class="footer-link me-3" target="_blank">
             <img src="assets/img/front-pages/icons/twitter-light.png" alt="twitter icon" />
           </a>
-          <a href="https://www.instagram.com/pixinvents/" class="footer-link" target="_blank">
+          <a href="https://www.instagram.com/Bproeng" class="footer-link" target="_blank">
             <img src="assets/img/front-pages/icons/instagram-light.png" alt="google icon" />
           </a>
         </div>
@@ -918,6 +741,7 @@
 
   <!-- Page JS -->
   <script src="assets/js/front-page-landing.js"></script>
+  <script src="assets/js/landing-page.js"></script>
 </body>
 
 </html>
