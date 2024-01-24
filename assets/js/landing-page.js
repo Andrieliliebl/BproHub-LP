@@ -1,22 +1,59 @@
 'use strict';
 
+
+
 function selectPerfil(value) {
-    let texto = document.getElementById("inicio-texto")
+
+    
+    let inicioTexto = document.getElementById("inicio-texto")
+    let planejamentoTexto = document.getElementById("planejamento-texto")
+    let execucaoTexto = document.getElementById("execucao-texto")
+    let monitoriamentoTexto = document.getElementById("monitoramento-texto")
+    let posTexto = document.getElementById("pos-obra-texto")
+
+    inicioTexto.classList.remove("d-none");
+    planejamentoTexto.classList.remove("d-none");
+    execucaoTexto.classList.remove("d-none");
+    monitoriamentoTexto.classList.remove("d-none");
+    posTexto.classList.remove("d-none");
+
+
     switch (value) {
         case "cliente-radio":
-            texto.innerHTML = inicioTextoCliente;
-            
+            inicioTexto.innerHTML = inicioTextoCliente;
+            planejamentoTexto.innerHTML = planejamentoTextoCliente;
+            execucaoTexto.innerHTML = execucaoTextoCliente;
+            monitoriamentoTexto.innerHTML = monitoramentoTextoCliente;
+            posTexto.innerHTML = posTextoCliente;
+            break
         case "servidor-radio":
-            texto.innerHTML = inicioTextoServidor;
-            
+            inicioTexto.innerHTML = inicioTextoServidor;
+            planejamentoTexto.innerHTML = planejamentoTextoServidor;
+            execucaoTexto.innerHTML = execucaoTextoServidor;
+            monitoriamentoTexto.innerHTML = monitoramentoTextoServidor;
+            posTexto.innerHTML = posTextoServidor;
+            break
         case "projetista-radio":
-            texto.innerHTML = inicioTextoProjetista;
-            
+            inicioTexto.innerHTML = inicioTextoProjetista;
+            planejamentoTexto.innerHTML = planejamentoTextoProjetista;
+            execucaoTexto.innerHTML = execucaoTextoProjetista;
+            monitoriamentoTexto.innerHTML = monitoramentoTextoProjetista;
+            posTexto.innerHTML = posTextoProjetista;
+            break
         case "construtora-radio":
-            texto.innerHTML = inicioTextoConstrutora;
-            
+            inicioTexto.innerHTML = inicioTextoConstrutora;
+            planejamentoTexto.innerHTML = planejamentoTextoConstrutora;
+            execucaoTexto.innerHTML = execucaoTextoConstrutora;
+            monitoriamentoTexto.innerHTML = monitoramentoTextoConstrutora;
+            posTexto.innerHTML = posTextoConstrutorae;
+            break
         case "fiscal-radio":
-            texto.innerHTML = inicioTextoFiscal;
+            inicioTexto.innerHTML = inicioTextoFiscal;
+            planejamentoTexto.innerHTML = planejamentoTextoFiscal;
+            execucaoTexto.innerHTML = execucaoTextoFiscal;
+            monitoriamentoTexto.innerHTML = monitoramentoTextoFiscal;
+            posTexto.innerHTML = posTextoFiscal;
+            break
     }
 
 }
@@ -74,7 +111,7 @@ const inicioTextoFiscal = "Acesse toda a documentação e histórico do projeto 
     "Obtenha um projeto com linguagem padrão e sem conflitos";
 
 
-const planejamentoTextoCiente = "Simule diferentes cenários antes da construção <br>" +
+const planejamentoTextoCliente = "Simule diferentes cenários antes da construção <br>" +
 
     "Gere documentação técnica de forma rápida e prática <br>" +
 
@@ -115,13 +152,13 @@ const planejamentoTextoConstrutora = "Levantamento de campo com o uso de tecnolo
 const planejamentoTextoFiscal = "Acesse a projeção da obra de forma rápida e prática";
 
 
-const execucaoTextoCiente = "Contrate equipe de obras <br>" +
+const execucaoTextoCliente = "Contrate equipe de obras <br>" +
 
     "Centralize o controle logístico do projeto e garanta o registro do processo <br>" +
 
     "Treine os colaboradores da obra sobre metodologia BIM";
 
-const execucaooTextoServidor = "Contrate equipe de obras <br>" +
+const execucaoTextoServidor = "Contrate equipe de obras <br>" +
 
     "Centralize o controle logístico do projeto e garanta o registro do processo <br>" +
 
@@ -148,7 +185,7 @@ const execucaoTextoFiscal = "Tenha acesso ao controle logístico online <br>" +
     "Verifique a existência de interferências digitalmente"
 
 
-const monitoramentoTextoCiente = "Acompanhe e controle a execução do planejamento por meio de ferramentas digitais ao vivo <br>" +
+const monitoramentoTextoCliente = "Acompanhe e controle a execução do planejamento por meio de ferramentas digitais ao vivo <br>" +
 
     "Capture a realidade por meio de drones, laser Scanning e visualização 360°";
 
@@ -156,20 +193,20 @@ const monitoramentoTextoServidor = "Acompanhe e controle a execução do planeja
 
     "Capture a realidade por meio de drones, laser Scanning e visualização 360°";
 
-const monitoramentoProjetista = "Receba relatórios da execução da obra em tempo real <br>" +
+const monitoramentoTextoProjetista = "Receba relatórios da execução da obra em tempo real <br>" +
 
     "Capture a realidade por meio de drones, laser Scanning e visualização 360°";
 
-const monitoramentoConstrutora = "Capture a realidade por meio de drones, laser Scanning e visualização 360°"
+const monitoramentoTextoConstrutora = "Capture a realidade por meio de drones, laser Scanning e visualização 360°"
 
-const monitoramentoFiscal = "Acompanhe e controle a execução do planejamento por meio de ferramentas digitais ao vivo <br>" +
+const monitoramentoTextoFiscal = "Acompanhe e controle a execução do planejamento por meio de ferramentas digitais ao vivo <br>" +
 
     "Capture a realidade por meio de drones, laser Scanning e visualização 360° <br>" +
 
     "Registre as atualizações em um ambiente integrado";
 
 
-const posTextoCiente = "Tenha uma versão simplificada e visual do seu plano para facilitar a compreensão <br>" +
+const posTextoCliente = "Tenha uma versão simplificada e visual do seu plano para facilitar a compreensão <br>" +
 
     "Elabore relatórios com máxima transparência";
 
@@ -177,8 +214,8 @@ const posTextoServidor = "Tenha uma versão simplificada e visual do seu plano p
 
     "Elabore relatórios com máxima transparência";
 
-const posProjetista = "Tenha uma versão simplificada e visual do seu plano para facilitar a compreensão";
+const posTextoProjetista = "Tenha uma versão simplificada e visual do seu plano para facilitar a compreensão";
 
-const posConstrutora = "Conte com histórico de projeto para gerar relatórios e registrar processos na obra";
+const posTextoConstrutora = "Conte com histórico de projeto para gerar relatórios e registrar processos na obra";
 
-const posFiscal = "Conte com histórico de projeto para gerar relatórios e registrar processos na obra";
+const posTextoFiscal = "Conte com histórico de projeto para gerar relatórios e registrar processos na obra";
