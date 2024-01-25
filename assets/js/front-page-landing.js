@@ -99,16 +99,19 @@
   if (swiperLogos) {
     new Swiper(swiperLogos, {
       slidesPerView: 2,
+      inicialSlide: 0,
       autoplay: {
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false
       },
       breakpoints: {
         992: {
-          slidesPerView: 5
+          slidesPerView: 8,
+          inicialSlide: 0,
         },
         768: {
-          slidesPerView: 3
+          slidesPerView: 3,
+          inicialSlide: 1,
         }
       }
     });
