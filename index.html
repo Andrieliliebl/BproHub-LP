@@ -32,6 +32,9 @@
 
   <link rel="stylesheet" href="assets/libs/nouislider/nouislider.css" />
   <link rel="stylesheet" href="assets/libs/swiper/swiper.css" />
+  <link rel="stylesheet" href="assets/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="assets/libs/typeahead-js/typeahead.css" />
+  <link rel="stylesheet" href="assets/libs/animate-css/animate.css" />>
 
   <!-- Page CSS -->
 
@@ -42,6 +45,8 @@
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="assets/js/front-config.js"></script>
+  <script src="assets/js/template-customizer.js"></script>
+  <script src="assets/js/config.js"></script>
 
 </head>
 
@@ -261,8 +266,6 @@
                 <h6 class="ms-1 mb-0 pos-obra">Pós-obra</h6>
               </div>
               <p id="pos-obra-texto" class="d-none mt-3">
-
-
               </p>
             </div>
           </div>
@@ -274,6 +277,30 @@
         </div>
       </div>
       <!--/ Card Border Shadow -->
+      
+      <!--Modal-->
+
+      <div class="modal fade" id="landingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                <h1 id="modalTitle"></h1>
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="modalText"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Teste grátis</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
     </section>
     <!-- Our great team: End -->
 
@@ -731,17 +758,6 @@
     <!-- Contact Us: End -->
   </div>
 
-  <!--Scrolling text -->
-
-
-
-  <!--Scrolling text -->
-
-
-
-
-  <!-- / Sections:End -->
-
   <!-- Footer: Start -->
   <footer class="landing-footer bg-body footer-text">
     <div class="footer-bottom py-3">
@@ -771,6 +787,12 @@
   <script src="assets/libs/popper/popper.js"></script>
   <script src="assets/js/bootstrap.js"></script>
   <script src="assets/libs/node-waves/node-waves.js"></script>
+  <script src="assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="assets/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="assets/libs/hammer/hammer.js"></script>
+  <script src="assets/libs/i18n/i18n.js"></script>
+  <script src="assets/libs/typeahead-js/typeahead.js"></script>
+  <script src="assets/js/menu.js"></script>
 
   <!-- endbuild -->
 
@@ -780,10 +802,12 @@
 
   <!-- Main JS -->
   <script src="assets/js/front-main.js"></script>
+  <script src="assets/js/main.js"></script>
 
   <!-- Page JS -->
   <script src="assets/js/front-page-landing.js"></script>
   <script src="assets/js/landing-page.js"></script>
+  <script src="assets/js/ui-modals.js"></script>
 </body>
 
 </html>
