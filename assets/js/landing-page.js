@@ -1,5 +1,8 @@
 'use strict';
+/*cards*/
 
+
+/*cards*/
 
 
 function selectPerfil(value) {
@@ -58,164 +61,255 @@ function selectPerfil(value) {
 
 }
 
-const inicioTextoCliente = "✔ Identifique necessidades e objetivos <br>" +
+const inicioTextoCliente = "✔ Ferramenta de planejamento de projetos; <br>" +
 
-    "✔ Armazene toda a documentação em um ambiente seguro e rastreável <br>" +
+"✔ Repositório de armazenamento para documentação do projeto; <br>" +
 
-    "✔ Garanta o mesmo padrão de linguagem para todos os agentes do processo <br>" +
+"✔ Ferramenta de comunicação simples e unificada; <br>" +
 
-    "✔ Desenvolva conhecimentos sobre projetos focados em BIM e ESG <br>" +
+"✔ Ambiente de capacitação; <br>"
 
-    "✔ Aprenda a gerenciar projetos com metodologias ágeis <br>" +
 
-    "✔ Receba e registre propostas de construtoras em um ambiente integrado <br>";
+const inicioTextoServidor = "✔ Ferramenta de planejamento de projetos;<br>" +
 
-const inicioTextoServidor = "✔ Identifique necessidades e objetivos <br> " +
+"✔ Repositório de armazenamento para documentação do projeto;<br>"+
 
-    "✔ Armazene toda a documentação em um ambiente seguro e rastreável <br> " +
+"✔ Ferramenta de comunicação simples e unificada;<br>"+
 
-    "✔ Garanta o mesmo padrão de linguagem para todos os agentes do processo <br> " +
+"✔ Ambiente de capacitação;<br>"+
 
-    "✔ Desenvolva conhecimentos sobre projetos focados em BIM e ESG <br> " +
+"✔ Consultoria com equipe  especializada em obras públicas;<br>"
 
-    "✔ Aprenda a gerenciar projetos com metodologias ágeis <br> " +
+const inicioTextoProjetista = "✔ Ferramenta de planejamento de projetos;<br>"+
 
-    "✔ Contrate equipes adequadas ao termo de referência (TR) <br> " +
+"✔Repositório de armazenamento de documentação;<br>"+
 
-    "✔ Garanta a conformidade do projeto com documentos oficiais <br> " +
 
-    "✔ Receba e registre propostas de construtoras em um ambiente integrado";
+"✔ Ferramenta de comunicação simples e unificada;<br>"+
 
-const inicioTextoProjetista = "✔ Acesse toda a documentação do projeto a qualquer momento <br>" +
 
-    "✔ Garanta a adequação ao  mesmo padrão de linguagem para todos os agentes do projeto <br>" +
+"✔ Ambiente de capacitação;<br>"
 
-    "✔ Desenvolva conhecimentos sobre projetos focados em BIM e ESG <br>" +
 
-    "✔ Implemente o projeto por meio de metodologias ágeis";
+const inicioTextoConstrutora = "✔ Ferramenta de planejamento de projetos;<br>"+
 
+"✔ Repositório de armazenamento para documentação do projeto;<br>"+
 
-const inicioTextoConstrutora = "✔ Acesse toda a documentação do projeto a qualquer momento <br>" +
+"✔ Ferramenta de comunicação simples e unificada;<br>"+
 
-    "✔ Garanta a adequação ao  mesmo padrão de linguagem para todos os agentes do projeto <br>" +
+"✔ Ambiente de capacitação;<br>"+
 
-    "✔ Desenvolva conhecimentos sobre projetos focados em BIM e ESG  <br>" +
+"✔ Espaço para contratação de equipe de obras.<br>"
 
-    "✔ Implemente o projeto por meio de metodologias ágeis <br>" +
 
-    "✔ Contrate equipes especializadas para a condução da obra <br>";
 
+const inicioTextoFiscal = "✔ Repositório de armazenamento para documentação do projeto;<br>"+
 
-const inicioTextoFiscal = "✔ Acesse toda a documentação e histórico do projeto <br>" +
+"✔ Ferramenta de comunicação simples e unificada;<br>"+
 
-    "✔ Obtenha um projeto com linguagem padrão e sem conflitos";
+"✔ Ambiente de capacitação;<br>"
 
 
-const planejamentoTextoCliente = "✔ Simule diferentes cenários antes da construção <br>" +
 
-    "✔ Gere documentação técnica de forma rápida e prática <br>" +
+const planejamentoTextoCliente = "✔ Ferramenta de modelagem 3D; <br>" +
 
-    "✔ Recrute equipes especializadas de levantamento de campo com o uso de tecnologias BIM <br>" +
+"✔ Repositório de armazenamento de arquivos técnicos; <br>" +
 
-    "✔ Acesse ferramentas de modelagem  BIM";
+"✔ Ferramenta para gerenciamento de processos; <br>" +
 
-const planejamentoTextoServidor = "✔ Simule diferentes cenários antes da construção <br>" +
+"✔ Espaço para recrutamento de equipes especializadas; <br>"
 
-    "✔ Gere documentação técnica de forma rápida e prática <br>" +
 
-    "✔ Recrute equipes especializadas de levantamento de campo com o uso de tecnologias BIM <br>" +
 
-    "✔ Acesse ferramentas de modelagem  BIM"
+const planejamentoTextoServidor = "✔ Ferramenta de modelagem 3D;<br>"+
 
-const planejamentoTextoProjetista = "✔ Elabore o modelo BIM por meio das melhores ferramentas do mercado <br>" +
+"✔ Repositório de armazenamento de arquivos técnicos;<br>"+
 
-    "✔ Preveja cronograma de atividades geral e por etapas <br>" +
+"✔ Ferramenta para gerenciamento de processos;<br>"+
 
-    "✔ Contrate equipes e ferramentas para o planejamento e modelagem do projeto <br>" +
+"✔ Espaço para recrutamento de equipes especializadas no setor público; <br>"
 
-    "✔ Simule diferentes cenários antes de iniciar a construção <br>" +
 
-    "✔ Verifique e resolva conflitos diretos, 'clash' entre disciplinas <br>" +
+const planejamentoTextoProjetista = "✔ Ferramenta de modelagem 3D;<br>"+
 
-    "✔ Tenha acesso a sistemas tridimensionais <br>" +
 
-    "✔ Gere desenhos como, plantas, cortes, elevações  <br>" +
+"✔ Repositório de armazenamento de arquivos técnicos;<br>"+
 
-    "✔ Gere documentação técnica de forma rápida e prática";
 
-const planejamentoTextoConstrutora = "✔ Levantamento de campo com o uso de tecnologias compatíveis com o BIM <br>" +
+"✔ Ferramenta para gerenciamento de processos;<br>"+
 
-    "✔ Tenha acesso a projetos tridimensionais detalhados <br>" +
 
-    "✔ Use as melhores ferramentas do mercado para planejar a construção, incluindo logística, cronograma e coordenação do projeto";
+"✔ Ferramenta de integração entre disciplinas;<br>"
 
-const planejamentoTextoFiscal = "✔ Acesse a projeção da obra de forma rápida e prática";
 
+const planejamentoTextoConstrutora = "✔ Ferramenta de modelagem 3D;<br>"+
 
-const execucaoTextoCliente = "✔ Contrate equipe de obras <br>" +
+"✔ Repositório de armazenamento de arquivos técnicos;<br>"+
 
-    "✔ Centralize o controle logístico do projeto e garanta o registro do processo <br>" +
+"✔ Ferramenta para gerenciamento de processos;<br>"+
 
-    "✔ Treine os colaboradores da obra sobre metodologia BIM";
+"✔ Espaço para recrutamento de equipes especializadas; <br>"+
 
-const execucaoTextoServidor = "✔ Contrate equipe de obras <br>" +
+"✔ Ferramenta de acompanhamento do campo de obra em tempo real;<br>"
 
-    "✔ Centralize o controle logístico do projeto e garanta o registro do processo <br>" +
 
-    "✔ Treine os colaboradores da obra sobre metodologia BIM";
+const planejamentoTextoFiscal = "✔ Repositório de armazenamento de arquivos 3D;<br>"+
 
-const execucaoTextoProjetista = "✔ Centralize o controle logístico do projeto e garanta o registro do processo <br>" +
+"✔ Ferramenta para gerenciamento de processos;<br>"+
 
-    "✔ Obtenha relatórios de atividades, impacto <br>" +
+"✔ Ferramenta de acompanhamento do campo de obra em tempo real;<br>"
 
-    "✔ Modele condições existentes/interferências";
 
-const execucaoTextoConstrutora = "✔ Garanta o andamento fluído das tarefas e acompanhe em tempo real <br>" +
 
-    "✔ Centralize o controle logístico do projeto e garanta o registro do processo <br>" +
 
-    "✔ Garanta a visão 360° do projeto a qualquer momento <br>" +
+const execucaoTextoCliente = "✔ Espaço para contratação de equipe de obras; <br>" +
 
-    "✔ Treine os colaboradores da obra sobre metodologia BIM e ESG";
+"✔ Ferramenta para controle logístico; <br>" +
 
-const execucaoTextoFiscal = "✔ Tenha acesso ao controle logístico online <br>" +
+"✔ Ferramenta para gestão de tarefas; <br>" +
 
-    "✔ Obtenha relatórios de atividades, impacto <br>" +
+"✔ Ferramenta de registro de atividades; <br>" +
 
-    "✔ Verifique a existência de interferências digitalmente"
+"✔ Ambiente de capacitação; <br>"
 
 
-const monitoramentoTextoCliente = "✔ Acompanhe e controle a execução do planejamento por meio de ferramentas digitais ao vivo <br>" +
+const execucaoTextoServidor = "✔ Espaço para contratação de equipe de obras;<br>"+
 
-    "✔ Capture a realidade por meio de drones, laser Scanning e visualização 360°";
+"✔ Ferramenta para controle logístico;<br>"+
 
-const monitoramentoTextoServidor = "✔ Acompanhe e controle a execução do planejamento por meio de ferramentas digitais ao vivo <br>" +
+"✔ Ferramenta para gestão de tarefas;<br>"+
 
-    "✔ Capture a realidade por meio de drones, laser Scanning e visualização 360°";
+"✔ Ferramenta de registro de atividades;<br>"+
 
-const monitoramentoTextoProjetista = "✔ Receba relatórios da execução da obra em tempo real <br>" +
+"✔Ambiente de capacitação;<br>"
 
-    "✔ Capture a realidade por meio de drones, laser Scanning e visualização 360°";
 
-const monitoramentoTextoConstrutora = "✔ Capture a realidade por meio de drones, laser Scanning e visualização 360°"
+const execucaoTextoProjetista = "✔ Ferramenta para controle logístico;<br>"+
 
-const monitoramentoTextoFiscal = "✔ Acompanhe e controle a execução do planejamento por meio de ferramentas digitais ao vivo <br>" +
 
-    "✔ Capture a realidade por meio de drones, laser Scanning e visualização 360° <br>" +
+"✔ Ferramenta para gestão de tarefas;<br>"+
 
-    "✔ Registre as atualizações em um ambiente integrado";
 
+"✔ Ferramenta de registro de atividades;<br>"+
 
-const posTextoCliente = "✔ Tenha uma versão simplificada e visual do seu plano para facilitar a compreensão <br>" +
 
-    "✔ Elabore relatórios com máxima transparência";
+"✔ Ferramenta de visualização global para o projeto;<br>"+
 
-const posTextoServidor = "✔ Tenha uma versão simplificada e visual do seu plano para facilitar a compreensão <br>" +
 
-    "✔ Elabore relatórios com máxima transparência";
+"✔ Capacitações em diversas áreas;<br>"
 
-const posTextoProjetista = "✔ Tenha uma versão simplificada e visual do seu plano para facilitar a compreensão";
 
-const posTextoConstrutora = "✔ Conte com histórico de projeto para gerar relatórios e registrar processos na obra";
+const execucaoTextoConstrutora = "✔ Ferramenta para controle logístico;<br>"+
 
-const posTextoFiscal = "✔ Conte com histórico de projeto para gerar relatórios e registrar processos na obra";
+"✔ Ferramenta para gestão de tarefas;<br>"+
+
+"✔ Ferramenta de registro de atividades;<br>"+
+
+"✔ Ferramenta de visualização global para o projeto;<br>"+
+
+"✔ Capacitações em diversas áreas;<br>"
+
+
+const execucaoTextoFiscal = "✔ Ferramenta para controle logístico;<br>"+
+
+"✔ Ferramenta de registro e acompanhamento de atividades;<br>"+
+
+"✔ Ferramenta de visualização global para o projeto;<br>"+
+
+"✔ Ferramenta para acompanhamento digital em tempo real;<br>"
+
+
+
+const monitoramentoTextoCliente = "✔ Ferramenta de acompanhamento de atividades; <br>" +
+
+"✔ Ferramenta para acompanhamento 360°; <br>" +
+
+"✔ Ferramenta para visualização por Laser Scanning; <br>" +
+
+"✔ Visualização por meio de drones; <br>"
+
+
+const monitoramentoTextoServidor = "✔ Ferramenta de acompanhamento de atividades;<br>"+
+
+"✔ Ferramenta para acompanhamento 360°;<br>"+
+
+"✔ Ferramenta para visualização por Laser Scanning;<br>"+
+"✔ Visualização por meio de drones;<br>"
+
+
+const monitoramentoTextoProjetista = "✔ Ferramenta de acompanhamento de obra em tempo real;<br>"+
+
+"✔ Ferramenta de acompanhamento de atividades;<br>"+
+
+
+"✔ Ferramenta para acompanhamento 360°;<br>"+
+
+
+"✔  Ferramenta para visualização por Laser Scanning;<br>"+
+
+
+"✔ Visualização por meio de drones;<br>"
+
+
+const monitoramentoTextoConstrutora = "✔ Ferramenta de acompanhamento de atividades;<br>"+
+
+"✔ Ferramenta para acompanhamento 360°;<br>"+
+
+"✔ Ferramenta para visualização por Laser Scanning;<br>"+
+
+"✔ Visualização por meio de drones;<br>"
+
+
+const monitoramentoTextoFiscal = "✔ Ferramenta de acompanhamento de atividades;<br>"+
+ 
+ "✔ Ferramenta para acompanhamento 360°;<br>"+
+ 
+ "✔ Ferramenta para visualização por Laser Scanning;<br>"+
+ 
+ "✔ Visualização por meio de drones;<br>"
+ 
+
+
+const posTextoCliente = "✔ Repositório de arquivos de todo o projeto; <br>" +
+
+"✔ Versões simplificadas do projeto; <br>" +
+
+"✔ Ambiente com histórico de modelagens; <br>" +
+
+"✔ Ferramenta para emissão de relatórios personalizados; <br>" 
+
+
+const posTextoServidor = "✔ Repositório de arquivos de todo o projeto;<br>"+
+ 
+ "✔ Versões simplificadas do projeto;<br>"+
+ 
+ "✔ Ambiente com histórico de modelagens;<br>"+
+ 
+ "✔ Ferramenta para emissão de relatórios personalizados;<br>"
+ 
+
+const posTextoProjetista = "✔ Repositório de arquivos de todo o projeto;<br>"+
+
+
+"✔ Versões simplificadas do projeto;<br>"+
+
+
+"✔ Ambiente com histórico de modelagens;<br>"+
+
+
+"✔ Ferramenta para emissão de relatórios personalizados;<br>"
+
+
+const posTextoConstrutora = "✔ Ambiente com histórico de modelagens;<br>"+
+
+"✔ Ferramenta para emissão de relatórios personalizados;<br>"+
+
+"✔ Repositório de arquivos de todo o projeto;<br>"
+
+
+
+const posTextoFiscal = "✔ Ambiente com histórico de modelagens;<br>"+
+
+"✔ Ferramenta para emissão de relatórios personalizados;<br>"+
+
+"✔ Repositório de arquivos de todo o projeto;<br>"
