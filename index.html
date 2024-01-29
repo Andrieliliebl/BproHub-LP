@@ -108,8 +108,8 @@
         <ul class="navbar-nav flex-row align-items-center ms-auto">
           <!-- navbar button: Start -->
           <li>
-            <a href="index.html#contato" class="btn btn-primary"><span class="d-flex">Teste
-                agora</span></a>
+            <a href="index.html#contato" class="btn btn-primary"><span class="d-flex">Inscreva-se para testar
+                grátis</span></a>
           </li>
           <!-- navbar button: End -->
         </ul>
@@ -138,7 +138,7 @@
                 passo!
                 <img src="assets/img/front-pages/icons/Join-community-arrow.png" alt="Join community arrow"
                   class="scaleX-n1-rtl" /></span>
-              <a href="index.html#contato" class="btn btn-primary btn-lg">Use agora, de graça</a>
+              <a href="index.html#contato" class="btn btn-primary btn-lg">Experimente agora!</a>
             </div>
           </div>
           <div id="heroDashboardAnimation" class="hero-animation-img">
@@ -164,36 +164,42 @@
           <span class="badge bg-label-primary">Visão macro do fluxo BIM</span>
         </div>
         <h1 class="text-center mb-1"><span class="section-title">Soluções personalizadas</span> para o seu projeto</h1>
-        <h5 class="text-center mb-md-5 pb-3">Cada fase BIM exige diferentes ferramentas e metodologias, e com a
-          gente,<br>você tem acesso aos melhores recursos, aprovados na prática:</h5>
+        <h5 class="text-center mx-md-5 mt-3 mb-md-5 pb-3">A tecnologia BIM <strong>simula digitalmente a
+            construção</strong>,
+          antes mesmo do início das obras. Assim, ela facilita a colaboração eficiente entre as várias
+          partes interessadas e ainda impulsiona a transparência e a segurança de informações, gerando impactos
+          tangíveis nos projetos.<br>
+          Com anos de experiência, nós desenvolvemos as <strong>ferramentas para você
+            colocar o BIM em prática</strong>.
+        </h5>
         <div class="container d-flex justify-content-center">
           <div class="mb-3">
             <label class="d-block form-label">
-              <h5>Selecione o <strong>seu perfil</strong> e veja como podemos te ajudar:</h5>
+              <h5>Selecione o <strong>seu perfil</strong> e veja que recursos usar em cada fase do processo: </h5>
             </label>
             <div class="form-check-inline mt-3 me-3">
               <input type="radio" name="profile-radio" class="form-check-input" id="perfil-cliente"
-                onclick="selectPerfil()" required  value="perfil-cliente"/>
+                onclick="selectPerfil()" required value="perfil-cliente" />
               <label class="form-check-label" for="perfil-cliente">Sou contratante</label>
             </div>
             <div class="form-check-inline me-3">
               <input type="radio" name="profile-radio" class="form-check-input" id="perfil-servidor"
-                onclick="selectPerfil()" required value="perfil-servidor"/>
+                onclick="selectPerfil()" required value="perfil-servidor" />
               <label class="form-check-label" for="perfil-servidor">Sou servidor público</label>
             </div>
             <div class="form-check-inline me-3">
               <input type="radio" name="profile-radio" class="form-check-input" id="perfil-projetista"
-                onclick="selectPerfil()" required value="perfil-projetista"/>
+                onclick="selectPerfil()" required value="perfil-projetista" />
               <label class="form-check-label" for="perfil-projetista">Sou projetista</label>
             </div>
             <div class="form-check-inline me-3">
               <input type="radio" name="profile-radio" class="form-check-input" id="perfil-construtora"
-                onclick="selectPerfil()" required value="perfil-construtora"/>
+                onclick="selectPerfil()" required value="perfil-construtora" />
               <label class="form-check-label" for="perfil-construtora">Sou representante de construtora</label>
             </div>
             <div class="form-check-inline me-3">
               <input type="radio" name="profile-radio" class="form-check-input" id="perfil-fiscal"
-                onclick="selectPerfil()" required value="perfil-fiscal"/>
+                onclick="selectPerfil()" required value="perfil-fiscal" />
               <label class="form-check-label" for="perfil-fiscal">Sou fiscal de obra/cliente</label>
             </div>
           </div>
@@ -271,9 +277,8 @@
           </div>
         </div>
         <div class="row d-flex justify-content-center">
-          <a href="index.html#contato" class="btn btn-primary btn-md col-3 mt-5 col-6 col-lg-3">Aproveite os
-            melhores recursos
-            de graça!</a>
+          <a href="index.html#contato" class="btn btn-primary btn-md col-3 mt-5 col-6 col-lg-3">Teste nossos recursos de
+            graça!</a>
         </div>
       </div>
       <!--/ Card Border Shadow -->
@@ -291,7 +296,6 @@
                   <div class="onboarding-media">
                   </div>
                   <div class="onboarding-content">
-                    <h4 class="onboarding-title text-body" id="profileExplanationModalTitle">BPro</h4>
                     <div class="onboarding-info" id="profileExplanationModalText"></div>
                     <br>
                     <br>
@@ -303,21 +307,23 @@
                         </div>
                         <div class="col-md-6">
                           <label class="form-label" for="contact-form-email-modal">Email</label>
-                          <input type="text" id="contact-form-email-modal" class="form-control" placeholder="joao@gmail.com" />
+                          <input type="text" id="contact-form-email-modal" class="form-control"
+                            placeholder="joao@gmail.com" />
                         </div>
                         <div class="col-md-6">
                           <label class="form-label" for="contact-form-phone-modal">Telefone</label>
-                          <input type="text" class="form-control" id="contact-form-phone-modal" placeholder="00-00000-0000" />
+                          <input type="text" class="form-control" id="contact-form-phone-modal"
+                            placeholder="00-00000-0000" />
                         </div>
                         <div class="col-md-6">
                           <label for="contact-form-profile-modal" class="form-label">Seu perfil</label>
-                            <select class="form-select" tabindex="0" id="contact-form-profile-modal">
-                              <option value="perfil-cliente">Contratante</option>
-                              <option value="perfil-servidor">Servidor Público</option>
-                              <option value="perfil-projetista">Projetista</option>
-                              <option value="perfil-construtora">Construtora</option>
-                              <option value="perfil-fiscal">Fiscal</option>
-                            </select>
+                          <select class="form-select" tabindex="0" id="contact-form-profile-modal">
+                            <option value="perfil-cliente">Contratante</option>
+                            <option value="perfil-servidor">Servidor Público</option>
+                            <option value="perfil-projetista">Projetista</option>
+                            <option value="perfil-construtora">Construtora</option>
+                            <option value="perfil-fiscal">Fiscal</option>
+                          </select>
                         </div>
                         <div class="col-12">
                           <label class="form-label" for="contact-form-message-modal">Sua mensagem</label>
@@ -348,9 +354,9 @@
         <h1 class="text-center mb-1">
           <span class="section-title">Funcionalidades-chave</span> do BproHub
         </h1>
-        <h5 class="text-center mb-3 mb-md-5 pb-3">
+        <h5 class="text-center mx-md-5 mb-3 mb-md-5 pb-3">
           Projetadas para simplificar a sua jornada na construção, nossas soluções proporcionam a melhor comunicação
-          entre equipes, <br>agilidade no planejamento de ações e execução eficiente de qualquer projeto: </h5>
+          entre equipes, agilidade no planejamento de ações e execução eficiente de qualquer projeto: </h5>
         <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
           <div class="col-lg-4 col-sm-6 text-center features-icon-box">
             <div class="text-center mb-3">
@@ -426,9 +432,13 @@
         <h1 class="text-center mb-1">
           <span class="section-title">O BIM obrigatório</span> para orgãos públicos
         </h1>
-        <h5 class="text-center mb-3 mb-md-5 pb-3">
-          Te ajudamos a se adequar ao decreto 10.306/2020 sem burocracia,<br> com maior precisão, transparência e
-          eliminação de desperdícios nas ações </h5>
+        <h5 class="text-center mx-md-5 mb-3 mb-md-5 pb-3">
+          A Estratégia BIM BR, lançada em 2018 pelo Governo Federal, considera um marco temporal de 10 anos para a
+          adoção da metodologia BIM na administração pública. Atualmente, <strong>método é obrigatório nas etapas de
+            "projetos" e "obras" </strong> e, até 2028, deverá ser implementado no "pós-obra", encerrando o ciclo de
+          adoção total do
+          BIM nas obras públicas brasileiras.
+        </h5>
         <section id="landingFunFacts" class="landing-fun-facts">
           <div class="container">
             <div class="row">
@@ -518,9 +528,8 @@
         </section>
       </div>
       <div class="row d-flex justify-content-center">
-        <a href="index.html#contato" class="btn btn-primary btn-md col-3 mt-5 col-6 col-lg-3">Introduza o BIM no
-          seu
-          empreendimento!</a>
+        <a href="index.html#contato" class="btn btn-primary btn-md col-3 mt-5 col-6 col-lg-3">Use o BIM na sua
+          prefeitura</a>
       </div>
     </section>
     <!-- Fun facts: End -->
@@ -723,7 +732,7 @@
           <span class="badge bg-label-primary">Entre em contato</span>
         </div>
         <h1 class="text-center mb-1"><span class="section-title">Vamos construir</span> juntos!</h1>
-        <h5 class="text-center mb-4 mb-lg-5 pb-md-3">Comece a testar todas as funcionalidades agora mesmo <br>e
+        <h5 class="text-center mb-4 mb-lg-5 pb-md-3">Comece a testar todas as funcionalidades agora mesmo e
           obtenha o melhor que a metodologia BIM pode te oferecer.
         </h5>
         <div class="row gy-4">

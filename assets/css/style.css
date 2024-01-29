@@ -4,8 +4,8 @@
 
 .explanation-text p {
     margin-bottom: 0.2rem;
-    font-size: 0.85rem;
-    line-height: 1.4rem;
+    font-size: 0.80rem;
+    line-height: 1rem;
 }
 
 .explanation-text p:first-child {

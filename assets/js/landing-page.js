@@ -67,7 +67,6 @@ function openModal(type) {
     const myModal = new bootstrap.Modal('#landingModal', {
         keyboard: false
       })
-
       const textModal = document.getElementById("profileExplanationModalText")
       const profileSelect = document.getElementById("contact-form-profile-modal")
 
@@ -100,7 +99,7 @@ const planejamentoTextoCliente = "<p><b class='highlight-step-text' onclick='ope
 
 "<p><b class='highlight-step-text' onclick='openModal(6)'>✔ Espaço para recrutamento de equipes especializadas;</b> </p>"
 
-const execucaoTextoCliente = "<p>✔ Espaço para <b class='highlight-step-text' onclick='openModal(6)'>contratação de equipe de obras;</b> </p><br>" +
+const execucaoTextoCliente = "<p>✔ <b class='highlight-step-text' onclick='openModal(6)'>contratação de equipe de obras;</b> </p><br>" +
 
 "<p>✔ Ferramenta para <b class='highlight-step-text' onclick='openModal(5)'>controle logístico;</b> </p><br>" +
 
@@ -321,20 +320,20 @@ const posTextoFiscal = "<p>✔ Ambiente com <b class='highlight-step-text' oncli
 
 //----------------- Explicacoes das etapas para cada perfil
 
-const bProject = "É um repositório de armazenamento seguro e rastreável em que você pode acessar todos os documentos relativos ao projeto. Como aprovações, a Lista Mestra, relatórios de análise técnica de projetos, além de contar com um visualizador BIM. "
+const bProject = "<h4 class='onboarding-title text-body'>Bproject</h4> <br> É um repositório de armazenamento seguro e rastreável em que você pode acessar todos os documentos relativos ao projeto. Como aprovações, a Lista Mestra, relatórios de análise técnica de projetos, além de contar com um visualizador BIM. "
 
-const bProField = "Uma ferramenta perfeita para quem quer ter uma visão global do canteiro de obras." +
+const bProField = "<h4 class='onboarding-title text-body'>BproField</h4> <br> Uma ferramenta perfeita para quem quer ter uma visão global do canteiro de obras." +
                 "Nela, você pode monitorar os planejamentos criados, a execução de tarefas em tempo real, a lista de atividades, o controle de produção, a medição de impacto e ainda ter o acompanhamento visual por meio de câmeras 360°, drones, o trimble e ferramentas 4D…"
 
-const bProActivity = "Aproveite o melhor das metodologias ágeis para gerenciar as atividades da sua equipe. Centralize todas as tarefas em um único ambiente, atribua responsáveis, acompanhe em tempo real, realize revisões semanais e mantenha tudo registrado no sistema. Alinhe sua equipe e impulsione a produtividade."
+const bProActivity = "<h4 class='onboarding-title text-body'>BproActivity</h4> <br> Aproveite o melhor das metodologias ágeis para gerenciar as atividades da sua equipe. Centralize todas as tarefas em um único ambiente, atribua responsáveis, acompanhe em tempo real, realize revisões semanais e mantenha tudo registrado no sistema. Alinhe sua equipe e impulsione a produtividade."
 
-const bProManager = "Acompanhe resultados em tempo real No BproManager é possível verificar a gestão de entregas, fazer o monitoramento de atividades e acompanhar o resultado da obra ao vivo. "
+const bProManager = "<h4 class='onboarding-title text-body'>BproManager</h4> <br> Acompanhe resultados em tempo real No BproManager é possível verificar a gestão de entregas, fazer o monitoramento de atividades e acompanhar o resultado da obra ao vivo. "
 
-const bProLog = "Mantenha todas as informações logísticas em um só local Cadastre usuários, equipes, clientes e contratos de maneira eficiente, garantindo a fluidez no andamento do seu projeto. Simplifique a logística e foque no que realmente importa." 
+const bProLog = "<h4 class='onboarding-title text-body'>BproLog</h4> <br> Mantenha todas as informações logísticas em um só local Cadastre usuários, equipes, clientes e contratos de maneira eficiente, garantindo a fluidez no andamento do seu projeto. Simplifique a logística e foque no que realmente importa." 
 
-const bProEng = "Contrate um time experiente de gestores, engenheiros, arquitetos e muito mais! Conte com os melhores profissionais para o desenvolvimento, a gestão e a execução de seu projeto BIM."
+const bProEng = "<h4 class='onboarding-title text-body'>BproEng</h4> <br> Contrate um time experiente de gestores, engenheiros, arquitetos e muito mais! Conte com os melhores profissionais para o desenvolvimento, a gestão e a execução de seu projeto BIM."
 
-const capacitacoes = "Desenvolva habilidades únicas por meio de uma curadoria cuidadosa de cursos e treinamentos relacionados à metodologia BIM. " +
+const capacitacoes = "<h4 class='onboarding-title text-body'>Capacitações</h4> <br> Desenvolva habilidades únicas por meio de uma curadoria cuidadosa de cursos e treinamentos relacionados à metodologia BIM. " +
 
 "Entre eles, destacamos:" +
 
