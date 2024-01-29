@@ -1,0 +1,13 @@
+.highlight-step-text {
+    cursor: pointer;
+}
+
+.explanation-text p {
+    margin-bottom: 0.2rem;
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+}
+
+.explanation-text p:first-child {
+    margin-top: 1.7em;
+}

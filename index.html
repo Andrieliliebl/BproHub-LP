@@ -172,29 +172,29 @@
               <h5>Selecione o <strong>seu perfil</strong> e veja como podemos te ajudar:</h5>
             </label>
             <div class="form-check-inline mt-3 me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" id="cliente-radio"
-                onclick="selectPerfil('cliente-radio')" required />
-              <label class="form-check-label" for="basic-default-radio-male">Sou contratante</label>
+              <input type="radio" name="profile-radio" class="form-check-input" id="perfil-cliente"
+                onclick="selectPerfil()" required  value="perfil-cliente"/>
+              <label class="form-check-label" for="perfil-cliente">Sou contratante</label>
             </div>
             <div class="form-check-inline me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" id="servidor-radio"
-                onclick="selectPerfil('servidor-radio')" required />
-              <label class="form-check-label" for="basic-default-radio-female">Sou servidor público</label>
+              <input type="radio" name="profile-radio" class="form-check-input" id="perfil-servidor"
+                onclick="selectPerfil()" required value="perfil-servidor"/>
+              <label class="form-check-label" for="perfil-servidor">Sou servidor público</label>
             </div>
             <div class="form-check-inline me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" id="projetista-radio"
-                onclick="selectPerfil('projetista-radio')" required />
-              <label class="form-check-label" for="basic-default-radio-female">Sou projetista</label>
+              <input type="radio" name="profile-radio" class="form-check-input" id="perfil-projetista"
+                onclick="selectPerfil()" required value="perfil-projetista"/>
+              <label class="form-check-label" for="perfil-projetista">Sou projetista</label>
             </div>
             <div class="form-check-inline me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" id="construtora-radio"
-                onclick="selectPerfil('construtora-radio')" required />
-              <label class="form-check-label" for="basic-default-radio-female">Sou representante de construtora</label>
+              <input type="radio" name="profile-radio" class="form-check-input" id="perfil-construtora"
+                onclick="selectPerfil()" required value="perfil-construtora"/>
+              <label class="form-check-label" for="perfil-construtora">Sou representante de construtora</label>
             </div>
             <div class="form-check-inline me-3">
-              <input type="radio" name="basic-default-radio" class="form-check-input" id="fiscal-radio"
-                onclick="selectPerfil('fiscal-radio')" required />
-              <label class="form-check-label" for="basic-default-radio-female">Sou fiscal de obra/cliente</label>
+              <input type="radio" name="profile-radio" class="form-check-input" id="perfil-fiscal"
+                onclick="selectPerfil()" required value="perfil-fiscal"/>
+              <label class="form-check-label" for="perfil-fiscal">Sou fiscal de obra/cliente</label>
             </div>
           </div>
         </div>
@@ -210,8 +210,8 @@
                 </div>
                 <h6 class="ms-1 mb-0 inicio">Início</h6>
               </div>
-              <p id="inicio-texto" class="d-none mt-3">
-              </p>
+              <div id="inicio-texto" class="d-none mt-3 explanation-text">
+              </div>
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@
                 </div>
                 <h6 class="ms-1 mb-0 planejamento">Planejamento</h6>
               </div>
-              <p id="planejamento-texto" class="d-none mt-3"></p>
+              <div id="planejamento-texto" class="d-none mt-3 explanation-text"></div>
             </div>
           </div>
         </div>
@@ -237,8 +237,8 @@
                 </div>
                 <h6 class="ms-1 mb-0 execucao">Execução</h6>
               </div>
-              <p id="execucao-texto" class="d-none mt-3">
-              </p>
+              <div id="execucao-texto" class="d-none mt-3 explanation-text">
+              </div>
             </div>
           </div>
         </div>
@@ -251,8 +251,8 @@
                 </div>
                 <h6 class="ms-1 mb-0 monitoramento">Monitoramento</h6>
               </div>
-              <p id="monitoramento-texto" class="d-none mt-3">
-              </p>
+              <div id="monitoramento-texto" class="d-none mt-3 explanation-text">
+              </div>
             </div>
           </div>
         </div>
@@ -265,8 +265,8 @@
                 </div>
                 <h6 class="ms-1 mb-0 pos-obra">Pós-obra</h6>
               </div>
-              <p id="pos-obra-texto" class="d-none mt-3">
-              </p>
+              <div id="pos-obra-texto" class="d-none mt-3 explanation-text">
+              </div>
             </div>
           </div>
         </div>
@@ -277,30 +277,65 @@
         </div>
       </div>
       <!--/ Card Border Shadow -->
-      
-      <!--Modal-->
 
-      <div class="modal fade" id="landingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                <h1 id="modalTitle"></h1>
-              </h1>
+      <!--Modal-->
+      <div class="modal-onboarding modal fade animate__animated" id="landingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content text-center">
+            <div class="modal-header border-0">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-              <p id="modalText"></p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Teste grátis</button>
+            <div id="modalCarouselControls" class="carousel slide pb-4 mb-2" data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="onboarding-media">
+                  </div>
+                  <div class="onboarding-content">
+                    <h4 class="onboarding-title text-body" id="profileExplanationModalTitle">BPro</h4>
+                    <div class="onboarding-info" id="profileExplanationModalText"></div>
+                    <br>
+                    <br>
+                    <form>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <label class="form-label" for="contact-form-fullname-modal">Nome completo</label>
+                          <input type="text" class="form-control" id="contact-form-fullname-modal" placeholder="joão" />
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="contact-form-email-modal">Email</label>
+                          <input type="text" id="contact-form-email-modal" class="form-control" placeholder="joao@gmail.com" />
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="contact-form-phone-modal">Telefone</label>
+                          <input type="text" class="form-control" id="contact-form-phone-modal" placeholder="00-00000-0000" />
+                        </div>
+                        <div class="col-md-6">
+                          <label for="contact-form-profile-modal" class="form-label">Seu perfil</label>
+                            <select class="form-select" tabindex="0" id="contact-form-profile-modal">
+                              <option value="perfil-cliente">Contratante</option>
+                              <option value="perfil-servidor">Servidor Público</option>
+                              <option value="perfil-projetista">Projetista</option>
+                              <option value="perfil-construtora">Construtora</option>
+                              <option value="perfil-fiscal">Fiscal</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                          <label class="form-label" for="contact-form-message-modal">Sua mensagem</label>
+                          <textarea id="contact-form-message-modal" class="form-control" rows="8"
+                            placeholder="Escreva sua mensagem"></textarea>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn btn-primary">Envie agora</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-
-
     </section>
     <!-- Our great team: End -->
 
@@ -325,7 +360,7 @@
             <p class="features-icon-description">
               Desenvolva ferramentas únicas para resolver as questões da sua empresa
             </p>
-            <a href="index.html#contato" class="btn btn-primary btn-sm mt-2">Saiba mais</a>
+            <a onclick="openModal(1)" class="btn btn-primary btn-sm mt-2">Saiba mais</a>
           </div>
           <div class="col-lg-4 col-sm-6 text-center features-icon-box">
             <div class="text-center mb-3">
